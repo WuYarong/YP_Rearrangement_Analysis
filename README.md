@@ -34,15 +34,19 @@ python identify_RBP_hotspots.py.py --apply_fdr --prefix test.RBP_hotspots.out ex
 
 ### Copy number count of insertion sequences (IS)
 
-`
+
 #### step1: blastn mapping (output format: 6)
+`
 makeblastdb -in example/test.IS.fa -dbtype nucl  
 blastn -query example/test.strain1.chr.fasta -db example/test.IS.fa -outfmt "6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qlen slen" -out test.strain1.IS.m6.out  
-blastn -query example/test.strain2.chr.fasta -db example/test.IS.fa -outfmt "6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qlen slen" -out test.strain2.IS.m6.out  
+blastn -query example/test.strain2.chr.fasta -db example/test.IS.fa -outfmt "6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qlen slen" -out test.strain2.IS.m6.out 
+` 
 
 #### step2: distinguish and count different IS elements for multiple strains
+`
 grep IS100 test.strain*.m6.out >IS100.blast.m6.merge.txt  
 grep IS1541 test.strain*.m6.out >IS1541.blast.m6.merge.txt  
 python IS_count_merge.py IS100.blast.m6.merge.txt >IS100.blast.m6.merge.stat.xls  
 python IS_count_merge.py IS1541.blast.m6.merge.txt >IS1541.blast.m6.merge.stat.xls  
 `
+
