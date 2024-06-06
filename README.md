@@ -1,4 +1,4 @@
-# YP_Rearrangement_Analysis
+# *Yersinia pestis* Rearrangement Analysis
 This script is compatible with both Python 2 and Python 3, having been tested on Python 2.7+ and Python 3.6 & 3.7. 
 
 
