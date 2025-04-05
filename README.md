@@ -4,15 +4,15 @@ This script is compatible with both Python 2 and Python 3, having been tested on
 
 ## Software
 
-Nucleotide-Nucleotide BLAST 2.13.0+
+Nucleotide-Nucleotide BLAST (BLASTn) 2.13.0+
 
-Python 2.7+ or Python 3.6 & 3.7
+For compatibility, the code has been tested and optimized for Python 3.7.10, but it should also work with Python 2.7+, Python 3.6+, and other Python 3.7+ versions.
 
 ## Python Dependencies
 ```
-scipy  
-numpy  
-statsmodels  
+scipy 1.5.2
+numpy 1.18.1
+statsmodels 0.11.1  
 ```
 
 ## Installation Guide
